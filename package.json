@@ -1,0 +1,33 @@
+{
+  "name": "sextou",
+  "version": "1.0.0",
+  "description": "😌🎧",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server-koa": "^1.0.5",
+    "graphql": "^0.10.5",
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaiqueMitsuoka/sextou.git"
+  },
+  "keywords": [
+    "sextou",
+    "koa",
+    "graphql"
+  ],
+  "author": "Felipe Bernardes, Caique Mitsuoka & Felipe Soares",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CaiqueMitsuoka/sextou/issues"
+  },
+  "homepage": "https://github.com/CaiqueMitsuoka/sextou#readme"
+}
