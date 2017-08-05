@@ -12,7 +12,7 @@ class App extends Component {
       return <p>error</p>
     }
 
-    const playlist = this.props.data.Playlist;
+    const playlist = this.props.data.playlists;
     console.log(playlist);
 
     return (
