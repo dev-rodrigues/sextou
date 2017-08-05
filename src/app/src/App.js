@@ -34,10 +34,8 @@ class App extends Component {
 }
 
 const PlaylistQuery = gql`
-  query Playlist {
-    Playlist(id: "opipuoij") {
-      tracks
-    }
+  query {
+      playlists { name }
   }
 `
 export default graphql(PlaylistQuery)(App);
