@@ -57,7 +57,7 @@ const artists = [
 ]
 
 const playlists = [
-  { id: 'opipuoij', name: 'aquela', tracks: ['huiashei', 'ejaiosj', 'daojsoi', 'jdaiosj']}
+  { id: '0', name: 'aquela', tracks: ['huiashei', 'ejaiosj', 'daojsoi', 'jdaiosj']}
 ]
 
 module.exports = makeExecutableSchema({

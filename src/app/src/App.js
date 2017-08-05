@@ -4,15 +4,16 @@ import './app.css';
 
 class App extends Component {
   render() {
-    if (this.props.playlistQuery && this.props.playlistQuery.loading) {
-      return <p>loading</p>
+
+    if (!this.props.data || this.props.data.loading || !this.props.data.playlist) {
+      return <p>loading...</p>
     }
 
-    if (this.props.playlistQuery && this.props.playlistQuery.error) {
-      return <p>error</p>
+    if (this.props.data.error) {
+      return <p>error!</p>
     }
 
-    const playlist = this.props.data.playlists;
+    const playlist = this.props.data.playlist;
     console.log(playlist);
 
     return (
@@ -21,11 +22,11 @@ class App extends Component {
           <div>
             <h2>add a song</h2>
             <input type="text"/>
-
           </div>
           <div>
-            <h2>next songs</h2>
+            <h2>Playlist { playlist.name }</h2>
             <ol>
+              { playlist.tracks.map(track => <li key={ track.name }>{ track.name } by { track.artists[0].name }</li>)}
             </ol>
           </div>
       </header>
@@ -35,7 +36,15 @@ class App extends Component {
 
 const PlaylistQuery = gql`
   query {
-      playlists { name }
+      playlist(id: "0") {
+        name
+        tracks {
+          name
+          artists {
+            name
+          }
+        }
+      }
   }
 `
 export default graphql(PlaylistQuery)(App);
